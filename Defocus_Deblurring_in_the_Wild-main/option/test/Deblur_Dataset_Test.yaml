@@ -4,9 +4,9 @@ model: DefocusGAN # reconstruct Defocus network.
 
 
 dataset:
-  test: #DPDD  #for your dataset
+  test: #DPDD  
     name: test
-    dataroot:  /home/zjc/DataSet/dd_dp_dataset_canon/ 
+    dataroot:  ~ #for your dataset
     batch_size: 1
     workers: 1
     left_name: test_l/source
@@ -16,7 +16,7 @@ dataset:
   
   # test: #CUHK
   #   name: CUHK
-  #   dataroot:  /home/zjc/DataSet/CUHK/
+  #   dataroot:  ~ #for your dataset
   #   batch_size: 1
   #   workers: 1
   #   combine_source_name: source
@@ -24,7 +24,7 @@ dataset:
 
   # test: #PixelDP
   #   name: PixelDP
-  #   dataroot:  /home/zjc/DataSet/PixelDP/
+  #   dataroot:  ~ #for your dataset
   #   batch_size: 1
   #   workers: 1
   #   combine_source_name: test_c
@@ -32,7 +32,7 @@ dataset:
 
   val:
     name: val
-    dataroot: /home/zjc/DataSet/dd_dp_dataset_canon/
+    dataroot: ~ #for your dataset
     batch_size: 1
     workers: 1
     left_name: val_l/source
@@ -51,7 +51,7 @@ network_G:
 path:
   pretrain_model_G: ~
   strict_load: false
-  resume_state: /home/zjc/dual_pixel/Defocus_Deblurring_in_the_Wild-main/experiments/pretrain_model_for_DefocusGAN/90_models.pth
+  resume_state: ~ # the pretrained model
 logger:
   print_freq: 10
   save_checkpoint_freq: 20 #!!float 5e3
