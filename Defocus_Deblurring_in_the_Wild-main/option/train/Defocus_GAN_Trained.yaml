@@ -2,10 +2,10 @@ name: DefocusGAN_train
 use_tb_logger: true
 model:  DefocusGAN
 
-dataset:
+dataset:         
   train:
     name: train
-    dataroot: /home/zjc/dual_pixel/defocus-deblurring-dual-pixel-master/DPDNet/dd_dp_dataset_canon_patch
+    dataroot: ~ #for your dataset
     filter:
     trainpairs: data/canon_deblur_train_dataGAN.txt
     batch_size: 4
@@ -17,11 +17,11 @@ dataset:
     right_name: train_r/source
     combine_name: train_c/target
     combine_source_name: train_c/source
-    blur_name: /home/zjc/dual_pixel/defocus-deblurring-dual-pixel-master/DPDNet/dd_dp_dataset_canon_patch/train_SGb/source
+    blur_name: ~ #use learnable BK python file to generate defocus map 
   
   val:
     name: val
-    dataroot: /home/zjc/DataSet/dd_dp_dataset_canon/ 
+    dataroot: ~
     batch_size: 1
     workers: 1
     left_name: val_l/source
@@ -32,7 +32,7 @@ dataset:
     
   test:
     name: test
-    dataroot:  /home/zjc/DataSet/dd_dp_dataset_canon/ #~/Documents/deblur/dd_dp_dataset_validation_inputs_only #
+    dataroot:  ~
     batch_size: 1
     workers: 1
     left_name: test_l/source
@@ -51,7 +51,7 @@ network_G:
 path:
   pretrain_model_G: ~
   strict_load: true
-  resume_state: ~ #/home/zjc/dual_pixel/BaMBNet-main/experiments/DDGAN_final/models/latest.pth
+  resume_state: ~ 
 
 logger:
   print_freq: 10
