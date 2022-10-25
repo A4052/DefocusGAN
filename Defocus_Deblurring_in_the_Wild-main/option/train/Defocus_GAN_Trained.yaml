@@ -7,7 +7,7 @@ dataset:
     name: train
     dataroot: ~ #for your dataset
     filter:
-    trainpairs: data/canon_deblur_train_dataGAN.txt
+    trainpairs: ~ #for your dataset file
     batch_size: 4
     image_size: 512
     max_iter: 40
