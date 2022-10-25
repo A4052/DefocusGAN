@@ -2,18 +2,9 @@ name: Learnable_BK
 use_tb_logger: false
 model: Learnable_BK # reconstruct Defocus network.
 
-# dataset:
-#   test:
-#     name: test
-#     dataroot: /home/zjc/dual_pixel/defocus-deblurring-dual-pixel-master/DPDNet/dd_dp_dataset_canon_patch
-#     batch_size: 1
-#     workers: 1
-#     left_name: train_l/source
-#     right_name: train_r/source
-#     combine_name: train_c/target
-#     blur_name: /home/zjc/dual_pixel/defocus-deblurring-dual-pixel-master/DPDNet/dd_dp_dataset_canon_patch/val_b/source
+
 dataset:
-  test:
+  test:              # for your dataset
     name: test
     dataroot: /home/zjc/DataSet/dd_dp_dataset_canon/
     batch_size: 1
